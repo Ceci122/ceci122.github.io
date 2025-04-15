@@ -1,5 +1,4 @@
-Hi there this is my gitHUB MIT portfolio. I will be adding content as well as my resume and full-stack MIT certification. 
-y<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
