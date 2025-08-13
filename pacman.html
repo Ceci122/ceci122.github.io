@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Pac-Man Game</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: black;
+        }
+        #PacMan {
+            position: absolute;
+            transform-origin: center;
+            z-index: 2; /* Always above dots */
+        }
+        .dot {
+            width: 12px;
+            height: 12px;
+            background: yellow;
+            border-radius: 50%;
+            position: absolute;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+
+<img id="PacMan" src="images/PacMan1.png" width="200">
+
+<script>
+    let posX = 0;
+    let posY = 0;
+
+    let directionX = 0; // 0 = right, 1 = left
+    let directionY = 0; // 0 = down, 1 = up
+
+    const pacArray = [
+        ['images/PacMan1.png', 'images/PacMan2.png'], // right
+        ['images/PacMan3.png', 'images/PacMan4.png']  // left
+    ];
+
+    let focus = 0;
+    let dots = [];
+
+    function createDots() {
+        const spacing = 60; // distance between dots
+        for (let y = 50; y < window.innerHeight - 50; y += spacing) {
+            for (let x = 50; x < window.innerWidth - 50; x += spacing) {
+                const dot = document.createElement("div");
+                dot.classList.add("dot");
+                dot.style.left = x + "px";
+                dot.style.top = y + "px";
+                document.body.appendChild(dot);
+                dots.push(dot);
+            }
+        }
+    }
+
+    function Run() {
+        const img = document.getElementById("PacMan");
+        const imgWidth = img.width;
+        const imgHeight = img.height;
+
+        focus = (focus + 1) % 2;
+
+        // Bounce horizontally
+        if (posX <= 0) {
+            directionX = 0; // right
+        } else if (posX + imgWidth >= window.innerWidth) {
+            directionX = 1; // left
+        }
+
+        // Bounce vertically
+        if (posY <= 0) {
+            directionY = 0; // down
+        } else if (posY + imgHeight >= window.innerHeight) {
+            directionY = 1; // up
+        }
+
+        // Update image (mouth open/close) based on horizontal direction
+        img.src = pacArray[directionX][focus];
+
+        // Move Pac-Man
+        posX += (directionX === 0 ? 20 : -20);
+        posY += (directionY === 0 ? 10 : -10);
+
+        img.style.left = posX + "px";
+        img.style.top = posY + "px";
+
+        // Rotate based on travel direction
+        if (directionX === 0 && directionY === 0) img.style.transform = "rotate(0deg)";   // right-down
+        if (directionX === 0 && directionY === 1) img.style.transform = "rotate(-90deg)"; // right-up
+        if (directionX === 1 && directionY === 0) img.style.transform = "rotate(180deg)"; // left-down
+        if (directionX === 1 && directionY === 1) img.style.transform = "rotate(90deg)";  // left-up
+
+        // Eat dots
+        dots.forEach((dot, index) => {
+            const dotRect = dot.getBoundingClientRect();
+            const pacRect = img.getBoundingClientRect();
+
+            if (
+                pacRect.left < dotRect.right &&
+                pacRect.right > dotRect.left &&
+                pacRect.top < dotRect.bottom &&
+                pacRect.bottom > dotRect.top
+            ) {
+                dot.remove();
+                dots.splice(index, 1);
+            }
+        });
+
+        setTimeout(Run, 100);
+    }
+
+    window.onload = () => {
+        createDots();
+        Run();
+    };
+</script>
+
+</body>
+</html>
