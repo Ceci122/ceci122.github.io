@@ -1,0 +1,15 @@
+body {
+    background-color: rgb(250, 240, 226);
+}
+
+.card {
+    background-color: #f8f9fa; /* Light gray background for cards */
+    border: 1px solid #353636; /* Subtle border */
+    border-radius: 0.5rem; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+h5.card-title {
+    color: #333; /* Darker text for titles */
+    font-weight: Bold;
+}
