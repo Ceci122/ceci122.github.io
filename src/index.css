@@ -1,0 +1,5 @@
+/* Global styles for the app */
+@import "tailwindcss";
+@plugin "daisyui"; {
+    themes: all;
+}
