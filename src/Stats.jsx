@@ -1,1 +1,0 @@
-// GH contributions + language charts

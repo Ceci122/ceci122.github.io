@@ -1,8 +1,19 @@
-// logo, navbar, search, toggle light/dark mode
+// Navbar, search, toggle light/dark mode
+import { Link } from "react-router-dom";
+
 export default function Navbar() {
   return (
   <div className="navbar bg-base-300 shadow-sm">
     <div className="navbar-start">
+      <div className="flex-none">
+        <ul className="menu menu-horizontal px-1">
+          {/* SPA anchors*/}
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="Projects">Projects</Link></li>
+          <li><Link to="Stats">Stats</Link></li>
+          <li><a href="#Contact">Contact</a></li>
+        </ul>
+      </div>
       <div className="dropdown">
         <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
           <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /> </svg>
@@ -10,9 +21,10 @@ export default function Navbar() {
         <ul
           tabIndex={0}
           className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-          <li><a>Homepage</a></li>
-          <li><a>Projects</a></li>
-          <li><a>Contact</a></li>
+          {/* Router pages*/}  
+          <li><Link to="/blog">Blog</Link></li>
+          <li><Link to="/blogpost">Blog Post</Link></li>
+          <li><Link to="/projectdetail">Project Detail</Link></li>
         </ul>
       </div>
     </div>

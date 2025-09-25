@@ -59,5 +59,5 @@ export default function Footer() {
             </div>
         </nav>
         </footer>
-        )
+        );
     }
