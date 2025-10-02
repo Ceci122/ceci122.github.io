@@ -11,7 +11,7 @@ export default function About() {
             {/* Profile Image */}
             <div className="md:col-span-3 flex justify-center">
                 <img
-                src="/public/profilepic.jpg"
+                src="/profilepic.jpg"
                 alt="About Me"
                 className="img-fluid"
                 style={{ maxWidth: "190px", borderRadius: "50%" }}
