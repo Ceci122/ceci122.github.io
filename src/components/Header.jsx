@@ -9,9 +9,9 @@ export default function Navbar() {
         <ul className="menu menu-horizontal px-1">
           {/* SPA anchors*/}
           <li><Link to="/">Home</Link></li>
-          <li><Link to="Projects">Projects</Link></li>
-          <li><Link to="Stats">Stats</Link></li>
-          <li><a href="#Contact">Contact</a></li>
+          <li><a href="#projects" className="btn btn-ghost">Projects</a></li>
+          <li><a href="#stats" className="btn btn-ghost">Stats</a></li>
+          <li><a href="#contact" className="btn btn-ghost">Contact</a></li>
         </ul>
       </div>
       <div className="dropdown">
