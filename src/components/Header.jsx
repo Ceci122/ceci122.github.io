@@ -8,7 +8,7 @@ export default function Navbar() {
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1">
           {/* SPA anchors*/}
-          <li><Link to="/">Home</Link></li>
+          <li><a href="#home" className="btn btn-ghost">Home</a></li>
           <li><a href="#projects" className="btn btn-ghost">Projects</a></li>
           <li><a href="#stats" className="btn btn-ghost">Stats</a></li>
           <li><a href="#contact" className="btn btn-ghost">Contact</a></li>
