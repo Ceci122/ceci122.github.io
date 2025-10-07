@@ -3,7 +3,7 @@ export default function Stats() {
     return (
         <section id="stats" className="py-12 bg-gray-100">
             <div className="flex w-full flex-col">
-            <div className="divider divider-center">Stats</div>
+            <div className="divider divider-center text-2xl font-bold text-secondary">Stats</div>
             </div>
             <div className="my-12">
                 {/* Placeholder for stats content */}

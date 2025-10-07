@@ -2,7 +2,7 @@ export default function Contact() {
     return (
         <section id="contact" className="py-12 bg-gray-100">
         <div className="flex w-full flex-col">
-            <div className="divider divider-center">Contact</div>
+            <div className="divider divider-center text-2xl font-bold text-success">Contact</div>
             </div>
             <div className="my-12">
             <div className="card bg-base-100 shadow-xl p-6 max-w-lg">
