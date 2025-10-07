@@ -7,7 +7,7 @@ export default function Projects() {
         const carousel = carouselRef.current;
         if (!carousel) return;
 
-        let scrollInterval = setIntercal(() => {
+        let scrollInterval = setInterval(() => {
             // smooth scroll
             carousel.scrollBy({ left: 400, behavior: "smooth" });
 
@@ -26,11 +26,15 @@ export default function Projects() {
     return (
         <section id="projects" className="py-12 bg-gray-100">
             <div className="flex w-full flex-col">
-            <div className="divider divider-center text-2xl font-bold text-primary">Projects</div>
+            <div className="divider divider-center text-2xl font-bold text-primary">
+                Projects</div>
             </div>
 
-            {/* DaisyUI full bleed carousel */}
-            <div className="carousel carousel-center max-w-full p-8 space-x-8 bg-neutral rounded-box">
+            {/* auto-scrolling carousel */}
+            <div 
+            ref={carouselRef} 
+            className="carousel carousel-center max-w-full p-8 space-x-8 bg-neutral rounded-box overflow-x-scroll scroll-smooth"
+            >
             {/* Financial Dash App */}
             <div className="carousel-item">
                 <div className="card bg-base-100 w-96 shadow-sm">
