@@ -27,10 +27,10 @@ export default function About() {
                     functional websites. My journey in web development started with a simple
                     <span className="italic"> 'Hello world'</span> HTML page. Since then, I have 
                     sharpened my skills in HTML,
-                    CSS, and JavaScript, and I am always eager to learn more.
+                    CSS, JavaScript and Python, and I am always eager to learn more. 🌱
                 </p>
                 <p>
-                    In my free time, I enjoy exploring new coding challenges, hiking,
+                    In my free time, I enjoy exploring new coding challenges, hiking, biking,
                     reading, traveling, and gaming.
                 </p>
                 </div>

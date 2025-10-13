@@ -76,29 +76,30 @@ export default function Projects() {
                 <div className="card bg-base-100 w-96 shadow-sm">
                 <figure>
                     <img
-                    src="/pokemon-api-integration.png"
-                    alt="Pokemon API Integration Screenshot" 
+                    src="/Pokedex_demo.png"
+                    alt="Pokemon Pokedex Demo Screenshot" 
                     className="rounded-t-box"
                     />
                 </figure>
                 <div className="card-body">
-                    <h2 className="card-title">Pokemon API Integration Project - Coming Soon!</h2>
+                    <h2 className="card-title">Pokemon API PokeDex Project</h2>
                     <p>
-                        Developed with Next.js. Explore the world of Pokemon with real-time data from the PokeAPI.
+                        Developed with Vite + React + Tailwind + Bootstrap. Explore the world of Pokemon with real-time data from the PokeAPI.
                     </p>
                     <div className="card-actions justify-end">
                     <a 
-                    className="btn btn-soft" 
-                    href="https://nextjs-financial-dashboard-cecilia-ramirezs-projects.vercel.app/" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
+                        className="btn btn-soft" 
+                        href="https://ceci122.github.io/Pokemon-API-Demo/" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
                     >
                         View Live
                     </a>
-                    <a className="btn btn-soft btn-secondary" 
-                    href="https://github.com/Ceci122/nextjs-financial-dashboard" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
+                    <a 
+                        className="btn btn-soft btn-secondary" 
+                        href="https://github.com/Ceci122/Pokemon-API-Demo/tree/main" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
                     >
                         Source Code
                     </a>
