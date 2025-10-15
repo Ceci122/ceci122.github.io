@@ -1,8 +1,24 @@
 export default function Blog() {
     return (
+        <section id="blog" className="py-12 bg-gray-100">
         <article class="prose lg:prose-xl">
-             <h1>The Why?</h1>
-             <p>
+            <div className="card lg:card-side bg-base-100 shadow-sm">
+                <figure>
+                    <img
+                    src="/JR_Programmer.jpg"
+                    alt="Coding Illustration" />
+                </figure>
+             <div className="card-body">
+                <h2 className="card-title">My Journey to Becoming a Software Engineer</h2>
+                <p>
+                Transitioning from IT Professional to Software Engineer has been a challenging yet rewarding journey.
+                It all started with a desire to create something more than just maintaining systems and networks.
+                I wanted to build applications that could solve real-world problems and make a difference.
+                </p>
+                <div className="card-actions justify-end">
+                    <button className="btn btn-primary">Read More</button>
+                </div>
+             {/* <p>
                 I knew I wanted to upgrade from my (almost embarrasing) basic GitHub portfolio.
                 Plus, it would a awesome to be able to see my growth and be able to showcase that
                 in hopes to I dunno maybe inspire others like me. Transitioning from being an <italics>
@@ -18,9 +34,10 @@ export default function Blog() {
                 Which plugin? Which theme? How was the file tree structure going to look like? Is it going
                 to be SPA, like most Web Devs do, and all that good jazz. But no I wanted to be different
                 I want to create a hybrid of both SPA and multi-page (React routing). 
-            </p>
+            </p> */}
+                </div>
+            </div>
         </article>
-       
-
+        </section>
     );
 }

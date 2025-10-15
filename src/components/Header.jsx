@@ -11,6 +11,7 @@ export default function Navbar() {
           <li><a href="#home" className="btn btn-ghost">Home</a></li>
           <li><a href="#projects" className="btn btn-ghost">Projects</a></li>
           <li><a href="#stats" className="btn btn-ghost">Stats</a></li>
+          <li><a href="#technologies" className="btn btn-ghost">Technologies</a></li>
           <li><a href="#contact" className="btn btn-ghost">Contact</a></li>
         </ul>
       </div>

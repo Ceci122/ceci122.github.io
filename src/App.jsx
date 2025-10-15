@@ -7,6 +7,7 @@ import Footer from './components/Footer.jsx';
 import About from './components/Homepage.jsx';
 import Projects from './components/Projects.jsx';
 import Stats from './components/Stats.jsx';
+import Technologies from './components/Technologies.jsx';
 import Contact from './components/Contact.jsx';
 
 // Router pages
@@ -28,6 +29,7 @@ export default function App() {
           <About />
           <Projects />
           <Stats />
+          <Technologies />
           <Contact />
           </>
         }

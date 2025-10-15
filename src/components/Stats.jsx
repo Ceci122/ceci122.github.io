@@ -7,11 +7,11 @@ export default function Stats() {
             </div>
             <div className="my-12">
                 {/* Placeholder for stats content */}
-                <a href="https://github.com/Ceci122">
-                    <img align="center" src="https://github-readme-stats.vercel.app/api?username=Ceci122&show_icons=true&theme=radical" />
+                <a href="https://github.com/Ceci122/github-readme-stats">
+                <img height={200} align="center" src="https://github-readme-stats.vercel.app/api?username=Ceci122" />
                 </a>
-                <a href="https://github.com/Ceci122">
-                    <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=Ceci122&layout=compact&langs_count=6&theme=radical" />
+                <a href="https://github.com/Ceci122/convoychat">
+                <img height={200} align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=Ceci122&layout=compact&langs_count=8&card_width=320" />
                 </a>
 
             </div>
