@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom";
+
 export default function Blog() {
     return (
         <section id="blog" className="py-12 bg-gray-100">
-        <article class="prose lg:prose-xl">
+        <article className="prose lg:prose-xl">
             <div className="card lg:card-side bg-base-100 shadow-sm">
                 <figure>
                     <img
@@ -16,7 +18,7 @@ export default function Blog() {
                 I wanted to build applications that could solve real-world problems and make a difference.
                 </p>
                 <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Read More</button>
+                    <Link to="/blog/my-journey" className="btn btn-primary">Read More</Link>
                 </div>
              {/* <p>
                 I knew I wanted to upgrade from my (almost embarrasing) basic GitHub portfolio.

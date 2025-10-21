@@ -37,7 +37,7 @@ export default function App() {
 
         {/* Router-based extra pages */}
         <Route path="/blog" element={<Blog />} />
-        <Route path="/blog/:id" element={<BlogPost />} />
+        <Route path="/blog/my-journey" element={<BlogPost />} />
         <Route path="/projects/:id" element={<ProjectDetail />} />
       </Routes>
       <Footer />
