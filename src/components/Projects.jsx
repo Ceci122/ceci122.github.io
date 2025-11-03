@@ -9,7 +9,8 @@ export default function Projects() {
 
         let scrollInterval = setInterval(() => {
             // smooth scroll
-            carousel.scrollBy({ left: 400, behavior: "smooth" });
+            const scrollAmount = Math.min(360, Math.floor(carousel.clientWidth * 0.8));
+            carousel.scrollBy({ left: scrollAmount, behavior: "smooth" });
 
             // if near the end, reset back to start
             if (carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 10) {
@@ -33,16 +34,16 @@ export default function Projects() {
             {/* auto-scrolling carousel */}
             <div 
             ref={carouselRef} 
-            className="carousel carousel-center max-w-full p-8 space-x-8 bg-neutral rounded-box overflow-x-scroll scroll-smooth"
+            className="carousel carousel-center max-w-full p-4 sm:p-6 lg:p-8 space-x-4 sm:space-x-6 lg:space-x-8 bg-neutral rounded-box overflow-x-scroll scroll-smooth"
             >
             {/* Financial Dash App */}
             <div className="carousel-item">
-                <div className="card bg-base-100 w-96 shadow-sm">
+                <div className="card bg-base-100 w-72 sm:w-80 md:w-96 shadow-sm">
                 <figure>
                     <img
                     src="/nextjs-financial-dashboard.png"
                     alt="Financial Dashboard Screenshot" 
-                    className="rounded-t-box" 
+                    className="rounded-t-box w-full object-cover"
                     />
                 </figure>
                 <div className="card-body">
@@ -73,12 +74,12 @@ export default function Projects() {
 
             {/* Pokemon API Integration Project */}
             <div className="carousel-item">
-                <div className="card bg-base-100 w-96 shadow-sm">
+                <div className="card bg-base-100 w-72 sm:w-80 md:w-96 shadow-sm">
                 <figure>
                     <img
                     src="/Pokedex_demo.png"
                     alt="Pokemon Pokedex Demo Screenshot" 
-                    className="rounded-t-box"
+                    className="rounded-t-box w-full object-cover"
                     />
                 </figure>
                 <div className="card-body">
@@ -110,12 +111,12 @@ export default function Projects() {
                 
             {/* TicTacToe Game */}
             <div className="carousel-item">
-                <div className="card bg-base-100 w-96 shadow-sm">
+                <div className="card bg-base-100 w-72 sm:w-80 md:w-96 shadow-sm">
                 <figure>
                     <img
                     src="/tictactoeReact.png"
                     alt="Tic Tac Toe Game Screenshot" 
-                    className="rounded-t-box"
+                    className="rounded-t-box w-full object-cover"
                     />
             </figure>
             <div className="card-body">

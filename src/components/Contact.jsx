@@ -4,21 +4,23 @@ export default function Contact() {
         <div className="flex w-full flex-col">
             <div className="divider divider-center text-2xl font-bold text-success">Contact</div>
             </div>
-            <div className="my-12">
-            <div className="card bg-base-100 shadow-xl p-6 max-w-lg">
-                <h3 className="text-xl font-semibold mb-4">Contact me</h3>
+            <div className="my-8 px-4 sm:px-0 flex justify-center">
+            <div className="card bg-base-100 shadow-xl p-6 sm:p-8 w-full max-w-md">
+                <h3 className="text-xl font-semibold mb-4 text-center">Contact me</h3>
                 <form className="space-y-4">
                 <div>
-                <label htmlFor="Email" className="label">
+                <label htmlFor="email" className="label">
                     <span className="label-text">Email address</span>
                 </label>
                     <input
                     type="email"
-                    id="eemail"
+                    id="email"
                     placeholder="you@example.com"
                     className="input input-bordered w-full"
+                    required
+                    aria-required="true"
                     />
-                    <p className="text-sm text-gray-500 mt-1">
+                    <p className="text-xs sm:text-sm text-gray-500 mt-1">
                         We'll never share your email with anyone else.
                     </p>
                 </div>
@@ -37,12 +39,12 @@ export default function Contact() {
 
                 <div className="form-control">
                     <label className="cursor-pointer flex items-center gap-2">
-                    <input type="checkbox" className="checkbox" />
+                    <input type="checkbox" className="checkbox" aria-label="Confirm not a bot" />
                         <span className="label-text">Verify you're not a bot.</span>
                     </label>
                 </div>
 
-                <button type="submit" className="btn btn-primary w-full">
+                <button type="submit" className="btn btn-primary w-full" aria-label="Submit contact form">
                     Submit
                 </button>
                 </form>

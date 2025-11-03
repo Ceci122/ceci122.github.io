@@ -39,7 +39,7 @@ const Technologies = () => {
         <div className="flex w-full flex-col">
         <div className="divider divider-center text-2xl font-bold text-secondary">Technologies I Use</div>
         </div>
-        <div className="my-12">
+        <div className="my-8 grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-6 sm:gap-8 justify-items-center">
         {techIcons.map((icon) => (
           <div
             key={icon.alt}
@@ -49,7 +49,7 @@ const Technologies = () => {
             <img
               src={icon.src}
               alt={icon.alt}
-              className="w-14 h-14 sm:w-16 sm:h-16 opacity-80 hover:opacity-100 hover:scale-110 transition-transform duration-200"
+              className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 opacity-80 hover:opacity-100 hover:scale-110 transition-transform duration-200"
             />
           </div>
         ))}
